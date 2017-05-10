@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Slush Sites</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/slush.css">
+  <script src="load.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<link rel="stylesheet" type="text/css" media="screen" href="./css/mobilemenu.css"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".nav-button").click(function () {
+			$(".nav-button,.primary-nav").toggleClass("open");
+			});
+		});
+	</script>
+</head>
+
+<body>
+  <section id="banner">
+    <div class="wrapper">
+      <header>
+        <p id="logo">Slush Sites</p>
+        <button class="nav-button">Toggle Navigation</button>
+        <nav>
+          <ul class="primary-nav">
+            <li><a href="home.html" class="selected">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="#">Forums</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div class="content">
+        <h1 class="title">SLUSH SITES</h1>
+        <hr>
+        <h3 class="subtitle">SIMPLE &amp; CLEAN DESIGN</h3>
+        <div class="button_wrapper">
+          <a href="#" class="button button_highlight">Order</a>
+          <a href="services.html" class="button button_secondary">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="services">
+    <div class="wrapper">
+      <h2 class="title_secondary">Services</h2>
+    </div>
+    <div class="service_divs" style="width:33%; float: left;">
+      <img src="images/webdevicon.png">
+      <h3>Web</br>Development</h3>
+    </div>
+    <div class="service_divs" style="width:33%; display: inline-block;">
+      <img src="images/twittericon.png">
+      <h3>Social</br> Media</h3>
+    </div>
+    <div class="service_divs" style="width:33%; float: right;">
+      <img src="images/techicon.png">
+      <h3>Technical</br>Support</h3>
+    </div>
+  </section>
+  <section id="forums">
+    <div class="wrapper">
+      <h2 class="title_secondary">Forums</h2>
+      <p>Forums are expected to launch Summer 2017.</p>
+      <p>Sign up for our forums to post questions,
+        offer advice or solicit your freelance services*.</p>
+        <p style="font-size: 1rem;">*That are not available via Slush Sites.</p>
+    </div>
+  </section>
+  <section id="contact">
+    <div class="wrapper">
+      <h2 class="title_secondary">Contact Me</h2>
+      <section id="contact_form">
+          <form action="contact.html" method="post">
+            <div class="form_block">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="contact_name">
+            </div>
+          </br>
+            <div class="form_block">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="contact_email">
+            </div>
+          </br>
+            <div class="form_block">
+              <label for="telephone">Phone:</label>
+              <input type="tel" id="telephone" name="contact_telephone">
+            </div>
+          </br>
+            <div class="form_block">
+              <label for="message">Inquiry:</label>
+              <textarea id="message" name="contact_message"></textarea>
+            </div>
+            <div class="form_button">
+              <button id="submit_button" type="submit">Submit</button>
+            </div>
+          </form>
+        </div>
+      </section>
+  </section>
+  <footer>
+    <div style="float: left;">
+    <p>&copy; SLUSH SITES 2017</p>
+    </div>
+    <div style="float: right;">
+      <a href="privacy.html">Privacy Policy &amp; Terms of Use</a>
+    </div>
+  </footer>
+</body>
+</html>
