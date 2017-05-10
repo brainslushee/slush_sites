@@ -1,0 +1,581 @@
+/*------- Variables -------*/
+
+$white: #FFFFFF;
+$blue: #0066b3;
+$darkblue: #003D62;
+$lightblue: #24A5F2;
+$grey: #979595;
+$darkgrey: #6B6969;
+
+/*------- Global Styles -------*/
+
+body {
+  font-family: Open Sans, Helvetica, sans-serif;
+  text-shadow: 2px 2px 4px #000000;
+}
+.wrapper {
+  width: 1440px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+.button {
+  border: none;
+  outline: none;
+  border-radius: 2rem;
+  padding: .6rem 3.5rem;
+  font-weight: 700;
+  color: $white;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+}
+.button_highlight {
+  background: $grey;
+  padding: auto;
+  animation-name: slide_left;
+  animation-duration: 7s;
+  transition: background 1s;
+}
+.button_secondary {
+  background: rgba(0, 102, 179, 0.39);
+  animation-name: slide_right;
+  animation-duration: 7s;
+  transition: background 1s;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+.title_secondary {
+  font-size: 3rem;
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+  color: $white;
+  text-align: center;
+}
+
+.footer_selected {
+  color: $lightblue;
+}
+
+/*------- Banner Styles -------*/
+
+#banner {
+  /*Update background image, there is a blue shadow*/
+  background-image: url('../images/slushbanner.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 5rem;
+  header {
+    padding: 2rem 0 6rem 0;
+  }
+  #logo {
+    color: $white;
+    font-weight: 700;
+    font-size: 1.35rem;
+    float: left;
+    margin: 0;
+  }
+  nav {
+    float: right;
+    .selected {
+      color: $lightblue;
+    }
+    a {
+      color: $white;
+      font-weight: 700;
+      text-decoration: none;
+      margin-left: 2rem;
+    }
+    a:hover {
+      color: $grey;
+    }
+  }
+  .content {
+    padding: 2rem 0;
+    .title, .subtitle {
+      color: $white;
+      text-align: center;
+      max-width: 100%;
+    }
+    .title {
+      font-weight: 500;
+      font-size: 5.5rem;
+      margin: 0;
+      letter-spacing: 1rem;
+      animation-name: fade-in;
+      animation-duration: 5s;
+    }
+    .subtitle {
+      font-weight: 400;
+      font-size: 1.35rem;
+      width: 500px;
+      margin: 0 auto 2rem auto;
+      line-height: 1.65;
+      padding-top: 3.5rem;
+      padding-bottom: 5rem;
+      animation-name: drop_fade;
+      animation-duration: 5s;
+    }
+    hr {
+      background-color: $white;
+      border: none;
+      max-width: 45%;
+      margin: 1.5rem auto;
+      height: 3px;
+      box-shadow: 2px 2px 4px #000000;
+      animation-name: fade-in;
+      animation-duration: 5s;
+    }
+    .button_wrapper {
+      text-align: center;
+      margin: 3rem 0;
+      .button {
+        margin: 0 .75rem;
+      }
+      a.button_highlight:hover {
+        background: $darkgrey;
+      }
+      a.button_secondary:hover {
+        background: $darkblue;
+      }
+    }
+  }
+}
+
+/*-------- Services Styles -------*/
+
+#services {
+  background-color: $blue;
+  background-size: cover;
+  text-align: center;
+  color: $white;
+  h3 {
+    text-shadow: 2px 2px 4px #000000;
+    font-size: 1.75rem;
+    padding-bottom: 2rem;
+  }
+}
+.service_divs {
+  padding-bottom: 2rem;
+  img {
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter: drop-shadow(5px 5px 5px #222);
+  transition: background-color .75s;
+  border-radius: 100%;
+  }
+  img:hover {
+    background-color: $grey;
+    border-radius: 100%;
+
+  }
+  h3 {
+    padding-top: 1rem;
+  }
+}
+
+/*------- Forum Styles -------*/
+
+#forums {
+  background-color: $grey;
+  background-size: cover;
+  text-align: center;
+  color: $white;
+  p {
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 4px #000000;
+    padding-bottom: 2rem;
+  }
+}
+
+/*------- Contact Styles -------*/
+
+#contact {
+  background-color: $blue;
+  background-size: cover;
+  text-align: center;
+  color: $white;
+}
+
+/*------- Footer Styles -------*/
+
+footer {
+  padding: 1.5rem 2rem 2rem 2rem;
+  background-color: $grey;
+  background-size: cover;
+  color: $white;
+  font-weight: 700;
+  p {
+    text-shadow: 2px 2px 4px #000000;
+  }
+  a {
+    color: $white;
+    text-decoration: none;
+    margin-left: .5rem;
+  }
+  a:hover {
+    color: $grey;
+  }
+}
+
+/*------- Sub Page Styles -------*/
+
+.sub_page_title {
+  margin: 0;
+}
+
+/*------- About Page Styles -------*/
+
+#about_content {
+  background-color: $blue;
+  background-size: cover;
+  color: $white;
+  p {
+    font-size: 18px;
+  }
+}#about_text {
+  padding: 4rem 3rem 6rem 3rem;
+  max-width: 50%;
+  line-height: 2;
+}
+
+/*------- Services Page Styles -------*/
+
+.services_half {
+  width: 50%;
+  display: inline-block;
+  margin-right: -4px;
+  padding: 2rem 0;
+  color: $white;
+  p {
+    font-size: 18px;
+    line-height: 2;
+  }
+  ul {
+    font-size: 18px;
+    line-height: 2;
+    list-style: none;
+    li:before {
+      content: '\2022';
+      padding: 10px;
+      text-shadow: 1px 1px 2px black;
+    }
+    li {
+      margin-left: 2rem;
+    }
+  }
+  ol {
+    font-size: 18px;
+    line-height: 2;
+  }
+   .left {
+
+  }
+  .right {
+
+  }
+}
+#web_development {
+  background-color: $blue;
+}
+#social_media {
+  background-color: $grey;
+}
+#technical_support {
+  background-color: $blue;
+}
+
+/*------- Contact Page Styles -------*/
+
+#contact_form {
+  font-family: Open Sans, Helvetica, sans-serif;
+  background-color: $blue;
+  padding-bottom: 2rem;
+  max-width: 100%;
+  h1 {
+    text-align: left;
+    font-size: 1.1rem;
+    color: $white;
+    padding: 2rem 0;
+    margin: 0;
+  }
+  .form_block {
+    display: table;
+    width: 80%;
+    margin: 0 auto;
+    label {
+      color: $white;
+      display: table-cell;
+      width: 100px;
+      font-size: 1.5rem;
+      vertical-align: middle;
+    }
+    input {
+      display: table-cell;
+      width: 100%;
+      height: 1.5rem;
+      border: none;
+      box-shadow: 2px 2px 4px #000000;
+      border-radius: 5px;
+      padding: 10px;
+    }
+    textarea {
+      font-family: Open Sans, Helvetica, sans-serif;
+      display: table-cell;
+      width: 100%;
+      height: 3rem;
+      border: none;
+      box-shadow: 2px 2px 4px #000000;
+      border-radius: 5px;
+      padding: 10px;
+    }
+  }
+}
+#submit_button {
+  border: none;
+  outline: none;
+  border-radius: 2rem;
+  padding: .6rem 3.5rem;
+  font-weight: 700;
+  font-size: 16px;
+  color: $white;
+  text-decoration: none;
+  text-align: center;
+  background: $grey;
+  text-shadow: 2px 2px 4px #000000;
+  transition: background 1s;
+}
+button#submit_button:hover {
+  background: $darkgrey;
+}
+.form_button {
+  margin-top: 2rem;
+  text-align: center;
+}
+.contact_half1 {
+  max-width: 50%;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 7.5rem 0;
+}
+.contact_half2 {
+  max-width: 50%;
+  display: inline-block;
+  text-align: center;
+  margin: 0 auto;
+  padding: 7.5rem 0;
+}
+
+/*------- Privacy Page Styles -------*/
+
+#privacy_content {
+  text-shadow: none;
+  background-color: $blue;
+  .wrapper {
+    background-color: $white;
+    padding: 3rem;
+  }
+}
+
+/*------- Animations -------*/
+@keyframes fade-in {
+  from{opacity: 0}
+  to{opacity: 1}
+}
+
+@keyframes drop_fade {
+  0%{transform: translateY(-90px);
+     opacity: 0}
+  50%{transform: translateY(-90px);
+      opacity: 0}
+  100%{transform: translateY(0);
+       opacity: 1}
+}
+
+@keyframes slide_left {
+  0%{transform: translateX(-400px);
+     opacity: 0;}
+  75%{transform: translateX(-400px);
+      opacity: 0;}
+  100%{transform: translateX(0);
+       opacity: 1}
+}
+
+@keyframes slide_right {
+  0%{transform: translateX(400px);
+     opacity: 0}
+  75%{transform: translateX(400px);
+      opacity: 0}
+  100%{transform: translateX(0);
+       opacity: 1}
+}
+
+/*------- Mobile Stylings -------*/
+
+@media screen and (max-width: 480px) {
+  #services > div > h3 {
+    font-size: 1rem;
+  }
+  #banner {
+    padding-bottom: 0;
+    .content {
+      .subtitle {
+        padding-bottom: 0;
+      }
+      .button_wrapper {
+        .button {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+  body > footer {
+    font-size: .65rem;
+  }
+}
+@media screen and (max-width: 675px) {
+  #logo {
+    display: none;
+  }
+  #banner header {
+    padding: 0;
+  }
+  #banner {
+    .content {
+      .title {
+        letter-spacing: 0;
+      }
+    }
+    .sub_page_title {
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+    }
+  }
+}
+/*------- Mobile Menu -------*/
+.nav-button { display: none; } /* hide the navigation button by default */
+.primary-nav {
+  list-style: none;
+  li {
+    display: inline;
+  }
+}
+@media only screen and (max-width: 675px) {
+
+	.nav-button {
+		display: block;
+		position: absolute;
+		top: 7px;
+		left: 7px;
+		width: 50px;
+		height: 35px;
+		background: url('../images/menu-icon-large.png'), linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,.2));
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: 21px, 100%;
+		cursor: pointer;
+		border: 0 none;
+		border-bottom: 1px solid rgba(255,255,255,.1);
+		box-shadow: 0 0 4px rgba(0,0,0,.7) inset;
+		border-radius: 5px;
+		z-index: 999;
+		text-indent: -9999px;
+	}
+	.nav-button:hover {
+		background-color: rgba(0,0,0,.1);
+	}
+	.nav-button.open {
+		background: url('../images/close-icon-large.png'), linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,.2));
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: 21px, 100%;
+	}
+
+/*------- Navigation Bar -------*/
+
+	body { padding-top: 50px; }
+
+	.primary-nav {
+		width: 100%;
+		float: none;
+		background-color: #238be3; /* change the menu color */
+		background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,.2));
+		display: block;
+		height: 50px;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		box-shadow: 0 1px 2px rgba(0,0,0,.6);
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		z-index: 998;
+		clear: both;
+	}
+	.primary-nav li {
+		display: none;
+		width: 100%;
+		font-family: Arial;
+	}
+	.primary-nav li a {
+		display: block;
+		width: 90%;
+		padding: 10px 5%;
+		font-size: 14px;
+		font-weight: bold;
+		text-shadow: -1px -1px 0 rgba(0,0,0,.15);
+		color: white;
+		text-decoration: none;
+		border-bottom: 1px solid rgba(0,0,0,.2);
+		border-top: 1px solid rgba(255,255,255,.1);
+	}
+	.primary-nav li a:hover {
+		background-color: rgba(0,0,0,.5);
+		border-top-color: transparent;
+	}
+	.primary-nav > li:first-child {
+		border-top: 1px solid rgba(0,0,0,.2);
+	}
+
+	/* Toggle the navigation bar open  */
+
+	.primary-nav.open {
+		height: auto;
+		padding-top: 50px;
+	}
+	.primary-nav.open li {
+		display: block;
+	}
+
+	/* Submenus – optional .parent class indicates dropdowns */
+
+	.primary-nav > li:hover > a {
+		background: rgba(0,0,0,.5);
+		border-bottom-color: transparent;
+	}
+	.primary-nav li.parent > a:after {
+		content: "▼";
+		color: rgba(255,255,255,.5);
+		float: right;
+	}
+	.primary-nav li.parent > a:hover {
+		background: rgba(0,0,0,.75);
+	}
+	.primary-nav li ul {
+		display: none;
+		background: rgba(0,0,0,.5);
+		border-top: 0 none;
+		padding: 0;
+	}
+	.primary-nav li ul a {
+		border: 0 none;
+		font-size: 12px;
+		padding: 10px 5%;
+		font-weight: normal;
+	}
+	.primary-nav li:hover ul {
+		display: block;
+		border-top: 0 none;
+	}
+
+} /* End Mobile Styles */
